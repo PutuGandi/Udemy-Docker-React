@@ -1,0 +1,12 @@
+version: '3'
+services:
+    redis-server:
+        images: 'redis'
+    node-visits:
+        build: .
+        ports:
+            - "8081:8085"
+    node-simple-web:
+        build: ~/Docker-Udemy/Bagian-4/
+        ports:
+            - "8082:8080"
